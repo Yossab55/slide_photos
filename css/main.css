@@ -1,0 +1,140 @@
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+.bg-img {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.landing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.landing .text .quotes {
+  position: absolute;
+  top: -50px;
+  left: 65px;
+}
+.landing .text {
+  position: relative;
+  z-index: 1040;
+  width: 40%;
+}
+.landing .text p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 1.7;
+  color: var(--dark-blue);
+}
+.landing .text .title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  margin-top: 40px;
+}
+.landing .text .title span:first-child {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.landing .text .title span:last-child {
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+.landing .photo {
+  position: relative;
+  z-index: 1010;
+  box-shadow: -8px 13px 10px hsla(240, 37.3%, 20%, 0.44);
+  margin-left: -80px;
+}
+.landing .photo .bg {
+  position: absolute;
+  z-index: 1020;
+  width: 500px;
+  right: -45px;
+  top: -40px;
+}
+.landing .photo .pic {
+  width: 400px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1030;
+}
+.landing .photo .icons-slides {
+  position: absolute;
+  bottom: -17px;
+  left: 30px;
+  z-index: 1050;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 7px 14px hsla(240, 37.3%, 20%, 0.65);
+}
+.landing .photo .icons-slides img {
+  width: 20px;
+  padding: 6px 13px;
+}
+
+.landing .photo .icons-slides img {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .landing {
+    flex-direction: column-reverse;
+  }
+  .landing .text .quotes {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    top: -20px;
+  }
+  .landing .text {
+    width: calc(100% - 50px);
+    text-align: center;
+    margin-top: 80px;
+  }
+  .landing .text p {
+    font-size: 19px;
+  }
+  .landing .text .title {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .landing .photo {
+    margin: 0;
+  }
+  .landing .photo .bg {
+    width: 330px;
+  }
+  .landing .photo .pic {
+    width: 60vw;
+  }
+  .landing .photo .icons-slides {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bg-img img {
+    width: 80vw;
+  }
+}
