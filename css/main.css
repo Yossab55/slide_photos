@@ -9,7 +9,7 @@ body {
   font-variation-settings: "slnt" 0;
   height: 100vh;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .bg-img {
   position: absolute;
